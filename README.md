@@ -41,7 +41,7 @@ $cwsDebug->titleH3('H3 Title output');
 
 An example is available in ``index.php`` file :
 
-![](https:/raw.github.com/crazy-max/CwsDebug/blob/master/example.png)
+![](https://raw.github.com/crazy-max/CwsDebug/master/example.png)
 
 ## Methods
 
