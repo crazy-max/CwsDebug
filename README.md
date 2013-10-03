@@ -1,4 +1,4 @@
-# CwsCrypto
+# CwsDebug
 
 CwsDebug is a PHP class to output additional messages for debug.
 
