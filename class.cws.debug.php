@@ -20,7 +20,7 @@
  * @author Cr@zy
  * @copyright 2013, Cr@zy
  * @license GNU LESSER GENERAL PUBLIC LICENSE
- * @version 1.0
+ * @version 1.1
  *
  */
 
@@ -36,12 +36,6 @@ define('CWSDEBUG_FONT_FAMILY',       'Monospace');
 
 class CwsDebug
 {
-    /**
-     * CwsDebug version.
-     * @var string
-     */
-    private $version = '1.0';
-    
     /**
      * Control the debug output.
      * default CWSDEBUG_VERBOSE_QUIET
@@ -231,9 +225,10 @@ class CwsDebug
     /**
      * Set the debug mode.
      * @param int $mode - CWSDEBUG_MODE_ECHO ou CWSDEBUG_MODE_FILE
-     * @param string $filePath - The debug file path for CWSDEBUG_MODE_FILE. 
+     * @param string $filePath - The debug file path for CWSDEBUG_MODE_FILE.
+     * @param boolean $fileClear - Clear the debug file at the beginning. 
      */
-    public function setMode($mode, $filePath=null)
+    public function setMode($mode, $filePath=null, $fileClear=false)
     {
         if (!empty($mode)) {
             $this->mode = $mode;
@@ -244,15 +239,9 @@ class CwsDebug
             exit();
         } elseif (!empty($filePath)) {
             $this->filePath = $filePath;
+            if ($fileClear && file_exists($this->filePath)) {
+            	@unlink($this->filePath);
+            }
         }
-    }
-
-    /**
-     * Get the version.
-     * @return the $version
-     */
-    public function getVersion()
-    {
-        return $this->version;
     }
 }

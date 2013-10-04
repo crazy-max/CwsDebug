@@ -24,7 +24,8 @@ $cwsDebug->setVerbose(CWSDEBUG_VERBOSE_DEBUG); // CWSDEBUG_VERBOSE_QUIET, CWSDEB
 $cwsDebug->setMode(CWSDEBUG_MODE_ECHO);
 
 // FILE mode
-//$cwsDebug->setMode(CWSDEBUG_MODE_FILE, './cwsdebug.html'); // Default file path : './cwsdebug.html'
+// Default - filePath : './cwsdebug.html', fileClear : false
+//$cwsDebug->setMode(CWSDEBUG_MODE_FILE, './cwsdebug.html', false);
 
 $cwsDebug->simple('Simple output');
 $cwsDebug->error('Error output');
@@ -55,7 +56,6 @@ An example is available in ``index.php`` file :
 
 **setVerbose** - Control the debug output.<br />
 **setMode** - The debug output mode.<br />
-**getVersion** - Get the CwsCrypto version.<br />
 
 ## License
 
