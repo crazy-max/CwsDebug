@@ -196,9 +196,9 @@ class CwsDebug
                 fwrite($handle, '<fieldset style="margin-top:10pt;font-family:' .CWSDEBUG_FONT_FAMILY . ';">'
                     . '<legend style="font-weight:bold;">' . $msg . '</legend>' . cwsDump($dump, false) . '</fieldset>');
             } elseif ($error !== false) {
-                fwrite($handle, '<span style="color:#CC0000">ERROR: ' . $error . '</span>');
+                fwrite($handle, '<span style="font-family:' .CWSDEBUG_FONT_FAMILY . ';color:#CC0000">ERROR: ' . $error . '</span>');
             } else {
-                fwrite($handle, $msg);
+                fwrite($handle, '<span style="font-family:' .CWSDEBUG_FONT_FAMILY . ';">' . $msg . '</span>');
             }
             if ($insertNewline) {
                 fwrite($handle, "<br />\n");
