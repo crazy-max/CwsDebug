@@ -5,7 +5,8 @@ require_once 'class.cws.dump.php';
 
 require_once 'class.cws.debug.php';
 $cwsDebug = new CwsDebug();
-$cwsDebug->setVerbose(CWSDEBUG_VERBOSE_DEBUG); // CWSDEBUG_VERBOSE_QUIET, CWSDEBUG_VERBOSE_SIMPLE, CWSDEBUG_VERBOSE_REPORT or CWSDEBUG_VERBOSE_DEBUG
+// CWSDEBUG_VERBOSE_QUIET, CWSDEBUG_VERBOSE_SIMPLE, CWSDEBUG_VERBOSE_REPORT or CWSDEBUG_VERBOSE_DEBUG
+$cwsDebug->setVerbose(CWSDEBUG_VERBOSE_DEBUG);
 
 // ECHO mode
 $cwsDebug->setMode(CWSDEBUG_MODE_ECHO);
@@ -21,4 +22,3 @@ $cwsDebug->titleH1('H1 Title output');
 $cwsDebug->titleH2('H2 Title output');
 $cwsDebug->titleH3('H3 Title output');
 
-?>

@@ -20,19 +20,19 @@
  * @author Cr@zy
  * @copyright 2013, Cr@zy
  * @license GNU LESSER GENERAL PUBLIC LICENSE
- * @version 1.1
+ * @version 1.2
  *
  */
 
-define('CWSDEBUG_VERBOSE_QUIET',     0); // no output at all.
-define('CWSDEBUG_VERBOSE_SIMPLE',    1); // only output simple report.
-define('CWSDEBUG_VERBOSE_REPORT',    2); // output a detail report.
-define('CWSDEBUG_VERBOSE_DEBUG',     3); // output detail report as well as debug info.
+define('CWSDEBUG_VERBOSE_QUIET', 0); // no output at all.
+define('CWSDEBUG_VERBOSE_SIMPLE', 1); // only output simple report.
+define('CWSDEBUG_VERBOSE_REPORT', 2); // output a detail report.
+define('CWSDEBUG_VERBOSE_DEBUG', 3); // output detail report as well as debug info.
 
-define('CWSDEBUG_MODE_ECHO',         0); // output echo
-define('CWSDEBUG_MODE_FILE',         1); // output file
+define('CWSDEBUG_MODE_ECHO', 0); // output echo
+define('CWSDEBUG_MODE_FILE', 1); // output file
 
-define('CWSDEBUG_FONT_FAMILY',       'Monospace');
+define('CWSDEBUG_FONT_FAMILY', 'Monospace');
 
 class CwsDebug
 {
@@ -41,21 +41,21 @@ class CwsDebug
      * default CWSDEBUG_VERBOSE_QUIET
      * @var int
      */
-    private $verbose = CWSDEBUG_VERBOSE_QUIET;
+    private $_verbose = CWSDEBUG_VERBOSE_QUIET;
     
     /**
      * The debug output mode.
      * default CWSDEBUG_MODE_ECHO
      * @var int
      */
-    private $mode = CWSDEBUG_MODE_ECHO;
+    private $_mode = CWSDEBUG_MODE_ECHO;
     
     /**
      * The debug file path in CWSDEBUG_MODE_FILE mode.
      * default './cwsdebug.html'
      * @var string
      */
-    private $filePath = './cwsdebug.html';
+    private $_filePath = './cwsdebug.html';
     
     public function __construct()
     {
@@ -75,9 +75,9 @@ class CwsDebug
      */
     public function simple($msg, $verboseLvl=CWSDEBUG_VERBOSE_SIMPLE, $insertNewline=true, $dump=false, $error=false)
     {
-        if ($this->mode == CWSDEBUG_MODE_ECHO) {
+        if ($this->_mode == CWSDEBUG_MODE_ECHO) {
             $this->modeEcho($msg, $verboseLvl, $insertNewline, $dump, $error);
-        } elseif (!empty($this->filePath)) {
+        } elseif (!empty($this->_filePath)) {
             $this->modeFile($msg, $verboseLvl, $insertNewline, $dump, $error);
         }
     }
@@ -158,6 +158,15 @@ class CwsDebug
     }
     
     /**
+     * Output a new line.
+     * @param int $verboseLvl - the output level.
+     */
+    public function newLine($verboseLvl=null)
+    {
+        $this->simple(null, $verboseLvl);
+    }
+    
+    /**
      * Output a message in stdout.
      * @param string|array $msg : the output message.
      * @param int $verboseLvl : the output level of this message.
@@ -166,13 +175,13 @@ class CwsDebug
      */
     private function modeEcho($msg, $verboseLvl, $insertNewline, $dump, $error)
     {
-        if ($this->verbose >= $verboseLvl) {
+        if ($this->_verbose >= $verboseLvl) {
             if ($dump !== false) {
                 echo '<fieldset style="margin-top:10pt;font-family:' .CWSDEBUG_FONT_FAMILY . ';">'
                     . '<legend style="font-weight:bold;">' . $msg . '</legend>' . cwsDump($dump, false) . '</fieldset>';
             } elseif ($error !== false) {
                 echo '<span style="font-family:' .CWSDEBUG_FONT_FAMILY . ';color:#CC0000">ERROR: ' . $error . '</span>';
-            } else {
+            } elseif (!empty($msg)) {
                 echo '<span style="font-family:' .CWSDEBUG_FONT_FAMILY . ';">' . $msg . '</span>';
             }
             if ($insertNewline) {
@@ -190,14 +199,13 @@ class CwsDebug
      */
     private function modeFile($msg, $verboseLvl, $insertNewline, $dump, $error)
     {
-        $handle = @fopen($this->filePath, 'a+');
-        if ($this->verbose >= $verboseLvl) {
+        $handle = @fopen($this->_filePath, 'a+');
+        if ($this->_verbose >= $verboseLvl) {
             if ($dump !== false) {
-                fwrite($handle, '<fieldset style="margin-top:10pt;font-family:' .CWSDEBUG_FONT_FAMILY . ';">'
-                    . '<legend style="font-weight:bold;">' . $msg . '</legend>' . cwsDump($dump, false) . '</fieldset>');
+                fwrite($handle, '<fieldset style="margin-top:10pt;font-family:' .CWSDEBUG_FONT_FAMILY . ';"><legend style="font-weight:bold;">' . $msg . '</legend>' . cwsDump($dump, false) . '</fieldset>');
             } elseif ($error !== false) {
                 fwrite($handle, '<span style="font-family:' .CWSDEBUG_FONT_FAMILY . ';color:#CC0000">ERROR: ' . $error . '</span>');
-            } else {
+            } elseif (!empty($msg)) {
                 fwrite($handle, '<span style="font-family:' .CWSDEBUG_FONT_FAMILY . ';">' . $msg . '</span>');
             }
             if ($insertNewline) {
@@ -218,7 +226,7 @@ class CwsDebug
     public function setVerbose($verbose)
     {
         if (!empty($verbose)) {
-            $this->verbose = $verbose;
+            $this->_verbose = $verbose;
         }
     }
 
@@ -231,16 +239,16 @@ class CwsDebug
     public function setMode($mode, $filePath=null, $fileClear=false)
     {
         if (!empty($mode)) {
-            $this->mode = $mode;
+            $this->_mode = $mode;
         }
-        if ($this->mode == CWSDEBUG_MODE_FILE && empty($filePath)) {
-            $this->mode = CWSDEBUG_MODE_ECHO;
+        if ($this->_mode == CWSDEBUG_MODE_FILE && empty($filePath)) {
+            $this->_mode = CWSDEBUG_MODE_ECHO;
             $this->error('You have to set the file path for debugging in file mode...', CWSDEBUG_VERBOSE_QUIET);
             exit();
         } elseif (!empty($filePath)) {
-            $this->filePath = $filePath;
-            if ($fileClear && file_exists($this->filePath)) {
-            	@unlink($this->filePath);
+            $this->_filePath = $filePath;
+            if ($fileClear && file_exists($this->_filePath)) {
+            	@unlink($this->_filePath);
             }
         }
     }
