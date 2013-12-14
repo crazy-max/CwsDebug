@@ -20,7 +20,7 @@
  * @author Cr@zy
  * @copyright 2013, Cr@zy
  * @license GNU LESSER GENERAL PUBLIC LICENSE
- * @version 1.2
+ * @version 1.3
  *
  */
 
@@ -73,8 +73,9 @@ class CwsDebug
      * @param boolean|object $dump - the variable to dump or false.
      * @param boolean|string $error - the error message or false.
      */
-    public function simple($msg, $verboseLvl=CWSDEBUG_VERBOSE_SIMPLE, $insertNewline=true, $dump=false, $error=false)
+    public function simple($msg, $verboseLvl=null, $insertNewline=true, $dump=false, $error=false)
     {
+        $verboseLvl = $verboseLvl == null ? CWSDEBUG_VERBOSE_SIMPLE : $verboseLvl;
         if ($this->_mode == CWSDEBUG_MODE_ECHO) {
             $this->modeEcho($msg, $verboseLvl, $insertNewline, $dump, $error);
         } elseif (!empty($this->_filePath)) {
