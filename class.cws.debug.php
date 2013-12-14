@@ -249,7 +249,7 @@ class CwsDebug
         } elseif (!empty($filePath)) {
             $this->_filePath = $filePath;
             if ($fileClear && file_exists($this->_filePath)) {
-            	@unlink($this->_filePath);
+                @unlink($this->_filePath);
             }
         }
     }
