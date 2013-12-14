@@ -10,7 +10,7 @@ CwsDebug is a PHP class to output additional messages for debug.
 
 ## Getting started
 
-See ``index.php``.
+See ``index.php``
 
 ## Example
 
