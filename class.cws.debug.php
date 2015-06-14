@@ -20,7 +20,7 @@
  * @author Cr@zy
  * @copyright 2013-2015, Cr@zy
  * @license GNU LESSER GENERAL PUBLIC LICENSE
- * @version 1.4
+ * @version 1.5
  *
  */
 
@@ -65,11 +65,6 @@ class CwsDebug
     
     public function __construct(CwsDump $cwsDump)
     {
-        if (!$cwsDump instanceof CwsDump) {
-            $this->error('CwsDump is required - https://github.com/crazy-max/CwsDump', self::VERBOSE_QUIET);
-            exit();
-        }
-        
         $this->verbose = self::VERBOSE_QUIET;
         $this->mode = self::MODE_ECHO;
         $this->cwsDump = $cwsDump;
