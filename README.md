@@ -25,9 +25,13 @@ See ``example.php`` file sample to help you.
 **titleH2** - Output title H2.<br />
 **titleH3** - Output title H3.<br />
 
+**isQuietVerbose** - Check if verbose is quiet<br />
 **setQuietVerbose** - Quiet verbose output : no output at all (default)<br />
+**isSimpleVerbose** - Check if verbose is simple<br />
 **setSimpleVerbose** - Simple verbose output : only output simple report<br />
+**isReportVerbose** - Check if verbose is report<br />
 **setReportVerbose** - Report verbose output : output a detail report<br />
+**isDebugVerbose** - Check if verbose is debug<br />
 **setDebugVerbose** - Debug verbose output : output detail report as well as debug info<br />
 **setEchoMode** - Echo output mode (default)<br />
 **setFileMode** - File output mode<br />

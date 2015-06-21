@@ -1,7 +1,7 @@
 <?php
 
 // Download CwsDump at https://github.com/crazy-max/CwsDump
-require_once 'class.cws.dump.php';
+require_once '../CwsDump/class.cws.dump.php';
 $cwsDump = new CwsDump();
 
 require_once 'class.cws.debug.php';

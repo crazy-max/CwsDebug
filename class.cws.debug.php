@@ -226,11 +226,29 @@ class CwsDebug
      */
     
     /**
+     * Check if verbose is quiet.
+     * @return boolean
+     */
+    public function isQuietVerbose()
+    {
+        return $this->verbose == self::VERBOSE_QUIET;
+    }
+    
+    /**
      * Set the verbose to quiet.
      */
     public function setQuietVerbose()
     {
         $this->setVerbose(self::VERBOSE_QUIET);
+    }
+    
+    /**
+     * Check if verbose is simple.
+     * @return boolean
+     */
+    public function isSimpleVerbose()
+    {
+        return $this->verbose == self::VERBOSE_SIMPLE;
     }
     
     /**
@@ -242,11 +260,29 @@ class CwsDebug
     }
     
     /**
+     * Check if verbose is report.
+     * @return boolean
+     */
+    public function isReportVerbose()
+    {
+        return $this->verbose == self::VERBOSE_REPORT;
+    }
+    
+    /**
      * Set the verbose to report.
      */
     public function setReportVerbose()
     {
         $this->setVerbose(self::VERBOSE_REPORT);
+    }
+    
+    /**
+     * Check if verbose is debug.
+     * @return boolean
+     */
+    public function isDebugVerbose()
+    {
+        return $this->verbose == self::VERBOSE_DEBUG;
     }
     
     /**
