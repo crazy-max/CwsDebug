@@ -20,7 +20,7 @@
  * @author Cr@zy
  * @copyright 2013-2015, Cr@zy
  * @license GNU LESSER GENERAL PUBLIC LICENSE
- * @version 1.5
+ * @version 1.6
  *
  */
 
