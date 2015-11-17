@@ -1,0 +1,26 @@
+{
+    "name":         "crazy-max/cws-debug",
+    "type":         "library",
+    "description":  "CwsDebug is a PHP class to output additional messages for debug.",
+    "keywords":     [],
+    "homepage":     "https://github.com/crazy-max/CwsDebug",
+    "license":      "LGPL",
+    "authors":      [
+        {
+            "name":     "crazy-max",
+            "homepage": "http://www.crazyws.fr/"
+        }
+    ],
+    "require":      {
+    },
+    "require-dev":  {
+    },
+    "suggest":      {
+    },
+    "autoload":     {
+      "classmap": [ "class.cws.debug.php"]
+    },
+    "extra": {
+    },
+    "minimum-stability": "dev"
+}
