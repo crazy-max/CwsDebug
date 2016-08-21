@@ -3,26 +3,16 @@
 /**
  * CwsDebug
  *
- * CwsDebug is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your option)
- * or (at your option) any later version.
+ * PHP class to output additional messages for debug
  *
- * CwsDebug is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
- * for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program. If not, see http://www.gnu.org/licenses/.
- * 
  * @package CwsDebug
  * @author Cr@zy
  * @copyright 2013-2015, Cr@zy
  * @license GNU LESSER GENERAL PUBLIC LICENSE
- * @version 1.6
  *
  */
+
+namespace Cws;
 
 class CwsDebug
 {
@@ -57,17 +47,10 @@ class CwsDebug
      */
     private $filePath;
     
-    /**
-     * The cws dump instance.
-     * @var CwsDump
-     */
-    private $cwsDump;
-    
-    public function __construct(CwsDump $cwsDump)
+    public function __construct()
     {
         $this->verbose = self::VERBOSE_QUIET;
         $this->mode = self::MODE_ECHO;
-        $this->cwsDump = $cwsDump;
     }
     
     /**
@@ -184,7 +167,7 @@ class CwsDebug
         if ($this->verbose >= $verboseLvl) {
             if ($dump !== false) {
                 echo '<fieldset style="margin-top:10pt;font-family:' .self::FONT_FAMILY . ';">'
-                    . '<legend style="font-weight:bold;">' . $msg . '</legend>' . $this->cwsDump->dump($dump, false) . '</fieldset>';
+                    . '<legend style="font-weight:bold;">' . $msg . '</legend>' . cwsDump($dump, false) . '</fieldset>';
             } elseif ($error !== false) {
                 echo '<span style="font-family:' .self::FONT_FAMILY . ';color:#CC0000">ERROR: ' . $error . '</span>';
             } elseif (!empty($msg)) {
@@ -208,7 +191,7 @@ class CwsDebug
         $handle = @fopen($this->filePath, 'a+');
         if ($this->verbose >= $verboseLvl) {
             if ($dump !== false) {
-                fwrite($handle, '<fieldset style="margin-top:10pt;font-family:' .self::FONT_FAMILY . ';"><legend style="font-weight:bold;">' . $msg . '</legend>' . $this->cwsDump->dump($dump, false) . '</fieldset>');
+                fwrite($handle, '<fieldset style="margin-top:10pt;font-family:' .self::FONT_FAMILY . ';"><legend style="font-weight:bold;">' . $msg . '</legend>' . cwsDump($dump, false) . '</fieldset>');
             } elseif ($error !== false) {
                 fwrite($handle, '<span style="font-family:' .self::FONT_FAMILY . ';color:#CC0000">ERROR: ' . $error . '</span>');
             } elseif (!empty($msg)) {

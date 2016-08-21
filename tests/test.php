@@ -1,11 +1,9 @@
 <?php
 
-// Download CwsDump at https://github.com/crazy-max/CwsDump
-require_once '../CwsDump/class.cws.dump.php';
-$cwsDump = new CwsDump();
+require_once __DIR__ . '/../vendor/autoload.php';
+use Cws\CwsDebug;
 
-require_once 'class.cws.debug.php';
-$cwsDebug = new CwsDebug($cwsDump);
+$cwsDebug = new CwsDebug();
 
 // verbose
 //$cwsDebug->setQuietVerbose(); // default

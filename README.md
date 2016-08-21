@@ -1,15 +1,29 @@
+[![Build Status](https://travis-ci.org/crazy-max/CwsDebug.svg?branch=master)](https://travis-ci.org/crazy-max/CwsDebug) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/crazy-max/CwsDebug/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/crazy-max/CwsDebug/?branch=master)
+
 # CwsDebug
 
-CwsDebug is a PHP class to output additional messages for debug.
+PHP class to output additional messages for debug.
 
-## Requirements and installation
+## Requirements
 
-* Download [CwsDump](https://github.com/crazy-max/CwsDump).
-* Copy the ``class.cws.debug.php`` file in a folder on your server.
+* PHP >= 5.3
+* CwsDump >= 1.5
+
+## Installation with Composer
+
+```bash
+composer require crazy-max/CwsDebug
+```
+
+And download the code:
+
+```bash
+composer install # or update
+```
 
 ## Getting started
 
-See ``example.php`` file sample to help you.
+See ``tests/test.php`` file sample to help you.
 
 ## Example
 

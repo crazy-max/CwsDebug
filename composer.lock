@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "505b2f616ef783fe973f008c49331d31",
+    "content-hash": "dd1e4ff6b105ec8cea9be27ac2edf88d",
+    "packages": [
+        {
+            "name": "crazy-max/cws-dump",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crazy-max/CwsDump.git",
+                "reference": "4a9b1290c83673757ae47613a5c096c4f8b34854"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crazy-max/CwsDump/zipball/4a9b1290c83673757ae47613a5c096c4f8b34854",
+                "reference": "4a9b1290c83673757ae47613a5c096c4f8b34854",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Cws": "lib/"
+                },
+                "files": [
+                    "lib/Cws/CwsDumpHelper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "crazy-max",
+                    "homepage": "http://www.crazyws.fr/"
+                }
+            ],
+            "description": "PHP class to replace var_dump(), print_r() based on the Xdebug style.",
+            "homepage": "https://github.com/crazy-max/CwsDump",
+            "keywords": [
+                "Xdebug",
+                "dump",
+                "print_r",
+                "var_dump"
+            ],
+            "time": "2016-08-21 16:38:02"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": []
+}
