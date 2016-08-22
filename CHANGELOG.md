@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9 (2016/08/22)
+
+* Update dependencies
+
 ## 1.8 (2016/08/21)
 
 * Add travis and scrutinizer
