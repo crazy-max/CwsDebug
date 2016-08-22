@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.5 (2016/08/21)
+## 1.8 (2016/08/21)
 
 * Add travis and scrutinizer
 * Add CHANGELOG.md
