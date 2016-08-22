@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "505b2f616ef783fe973f008c49331d31",
-    "content-hash": "dd1e4ff6b105ec8cea9be27ac2edf88d",
+    "hash": "4b54e3b06daca6e17383d3854fb82081",
+    "content-hash": "6e0153df50062cf4c9d5a7502f0d72ff",
     "packages": [
         {
             "name": "crazy-max/cws-dump",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/crazy-max/CwsDump.git",
-                "reference": "4a9b1290c83673757ae47613a5c096c4f8b34854"
+                "reference": "e8d259eaba9547d6b00ae9d3cf0e2ae3d5289229"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crazy-max/CwsDump/zipball/4a9b1290c83673757ae47613a5c096c4f8b34854",
-                "reference": "4a9b1290c83673757ae47613a5c096c4f8b34854",
+                "url": "https://api.github.com/repos/crazy-max/CwsDump/zipball/e8d259eaba9547d6b00ae9d3cf0e2ae3d5289229",
+                "reference": "e8d259eaba9547d6b00ae9d3cf0e2ae3d5289229",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
                 "print_r",
                 "var_dump"
             ],
-            "time": "2016-08-21 16:38:02"
+            "time": "2016-08-22 19:58:23"
         }
     ],
     "packages-dev": [],
