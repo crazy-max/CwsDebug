@@ -12,7 +12,7 @@ PHP class to output additional messages for debug.
 ## Installation with Composer
 
 ```bash
-composer require crazy-max/CwsDebug
+composer require crazy-max/cws-debug
 ```
 
 And download the code:
