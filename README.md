@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.org/crazy-max/CwsDebug.svg?branch=master)](https://travis-ci.org/crazy-max/CwsDebug) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/crazy-max/CwsDebug/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/crazy-max/CwsDebug/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/crazy-max/cws-debug.svg?style=flat-square)](https://packagist.org/packages/crazy-max/cws-debug)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.3.0-8892BF.svg?style=flat-square)](https://php.net/)
+[![Build Status](https://img.shields.io/travis/crazy-max/CwsDebug/master.svg?style=flat-square)](https://travis-ci.org/crazy-max/CwsDebug)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/crazy-max/CwsDebug.svg?style=flat-square)](https://scrutinizer-ci.com/g/crazy-max/CwsDebug)
 
 # CwsDebug
 
@@ -6,7 +9,7 @@ PHP class to output additional messages for debug.
 
 ## Requirements
 
-* PHP >= 5.3
+* PHP >= 5.3.0
 * CwsDump >= 1.5
 
 ## Installation with Composer
@@ -23,7 +26,7 @@ composer install # or update
 
 ## Getting started
 
-See ``tests/test.php`` file sample to help you.
+See `tests/test.php` file sample to help you.
 
 ## Example
 
