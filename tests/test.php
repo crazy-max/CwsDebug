@@ -17,7 +17,7 @@ $cwsDebug->setEchoMode(); // default
 
 $cwsDebug->simple('Simple output');
 $cwsDebug->error('Error output');
-$cwsDebug->dump('Dump output', array('aString', 10, 1.5, true, new DateTime()));
+$cwsDebug->dump('Dump output', ['aString', 10, 1.5, true, new DateTime()]);
 $cwsDebug->labelValue('Label output', 'Value');
 $cwsDebug->titleH1('H1 Title output');
 $cwsDebug->titleH2('H2 Title output');
