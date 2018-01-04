@@ -4,17 +4,17 @@
   "description": "PHP class to output additional messages for debug.",
   "keywords": ["debug", "print", "log"],
   "homepage": "https://github.com/crazy-max/CwsDebug",
-  "license": "LGPL",
+  "license": "MIT",
   "authors": [
     {
-      "name": "crazy-max",
-      "homepage": "http://www.crazyws.fr/"
+      "name": "CrazyMax",
+      "homepage": "https://github.com/crazy-max"
     }
   ],
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.3.0",
-    "crazy-max/cws-dump": ">=1.8"
+    "crazy-max/cws-dump": "~1.9"
   },
   "autoload": {
     "psr-0": {

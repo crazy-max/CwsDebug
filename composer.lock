@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4b54e3b06daca6e17383d3854fb82081",
-    "content-hash": "6e0153df50062cf4c9d5a7502f0d72ff",
+    "content-hash": "2b220e3897e52db372e1755c366784e8",
     "packages": [
         {
             "name": "crazy-max/cws-dump",
-            "version": "dev-master",
+            "version": "1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/crazy-max/CwsDump.git",
-                "reference": "e8d259eaba9547d6b00ae9d3cf0e2ae3d5289229"
+                "reference": "41e34c6aeafc9430cf3d3e40f014124b9c764a91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crazy-max/CwsDump/zipball/e8d259eaba9547d6b00ae9d3cf0e2ae3d5289229",
-                "reference": "e8d259eaba9547d6b00ae9d3cf0e2ae3d5289229",
+                "url": "https://api.github.com/repos/crazy-max/CwsDump/zipball/41e34c6aeafc9430cf3d3e40f014124b9c764a91",
+                "reference": "41e34c6aeafc9430cf3d3e40f014124b9c764a91",
                 "shasum": ""
             },
             "require": {
@@ -35,12 +34,12 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "crazy-max",
-                    "homepage": "http://www.crazyws.fr/"
+                    "name": "CrazyMax",
+                    "homepage": "https://github.com/crazy-max"
                 }
             ],
             "description": "PHP class to replace var_dump(), print_r() based on the Xdebug style.",
@@ -51,7 +50,7 @@
                 "print_r",
                 "var_dump"
             ],
-            "time": "2016-08-22 19:58:23"
+            "time": "2018-01-04T14:42:56+00:00"
         }
     ],
     "packages-dev": [],
