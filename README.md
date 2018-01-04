@@ -4,17 +4,13 @@
 [![Code Quality](https://img.shields.io/codacy/grade/cce545430ecf4066982713bdf91d59e1.svg?style=flat-square)](https://www.codacy.com/app/crazy-max/CwsDebug)
 [![StyleCI](https://styleci.io/repos/13297266/shield?style=flat-square)](https://styleci.io/repos/13297266)
 [![Gemnasium](https://img.shields.io/gemnasium/crazy-max/CwsDebug.svg?style=flat-square)](https://gemnasium.com/github.com/crazy-max/CwsDebug)
+[![Donate Paypal](https://img.shields.io/badge/donate-paypal-7057ff.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CBCXP8HU9XFB4)
 
-# CwsDebug
+## About
 
 PHP class to output additional messages for debug.
 
-## Requirements
-
-* PHP >= 5.3.0
-* CwsDump >= 1.5
-
-## Installation with Composer
+## Installation
 
 ```bash
 composer require crazy-max/cws-debug
@@ -32,7 +28,7 @@ See `tests/test.php` file sample to help you.
 
 ## Example
 
-![](https://raw.github.com/crazy-max/CwsDebug/master/example.png)
+![](.res/example.png)
 
 ## Methods
 
@@ -55,6 +51,14 @@ See `tests/test.php` file sample to help you.
 **setEchoMode** - Echo output mode (default)<br />
 **setFileMode** - File output mode<br />
 
+## How can i help ?
+
+We welcome all kinds of contributions :raised_hands:!<br />
+The most basic way to show your support is to star :star2: the project, or to raise issues :speech_balloon:<br />
+Any funds donated will be used to help further development on this project! :gift_heart:
+
+[![Donate Paypal](.res/paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CBCXP8HU9XFB4)
+
 ## License
 
-LGPL. See ``LICENSE`` for more details.
+MIT. See `LICENSE` for more details.
