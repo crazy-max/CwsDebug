@@ -1,6 +1,6 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/crazy-max/cws-debug.svg?style=flat-square)](https://packagist.org/packages/crazy-max/cws-debug)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.3.0-8892BF.svg?style=flat-square)](https://php.net/)
-[![Build Status](https://img.shields.io/travis/crazy-max/CwsDebug/master.svg?style=flat-square)](https://travis-ci.org/crazy-max/CwsDebug)
+[![Build Status](https://img.shields.io/travis/com/crazy-max/CwsDebug/master.svg?style=flat-square)](https://travis-ci.com/crazy-max/CwsDebug)
 [![Code Quality](https://img.shields.io/codacy/grade/cce545430ecf4066982713bdf91d59e1.svg?style=flat-square)](https://www.codacy.com/app/crazy-max/CwsDebug)
 [![Donate Paypal](https://img.shields.io/badge/donate-paypal-7057ff.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CBCXP8HU9XFB4)
 
@@ -49,9 +49,9 @@ See `tests/test.php` file sample to help you.
 **setEchoMode** - Echo output mode (default)<br />
 **setFileMode** - File output mode<br />
 
-## How can i help ?
+## How can I help ?
 
-All kinds of contributions are welcomed :raised_hands:!<br />
+All kinds of contributions are welcome :raised_hands:!<br />
 The most basic way to show your support is to star :star2: the project, or to raise issues :speech_balloon:<br />
 But we're not gonna lie to each other, I'd rather you buy me a beer or two :beers:!
 
