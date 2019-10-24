@@ -1,4 +1,5 @@
 {
+  "abandoned": true,
   "name": "crazy-max/cws-debug",
   "type":  "library",
   "description": "PHP class to output additional messages for debug.",
